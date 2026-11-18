@@ -1,0 +1,4 @@
+.containter {
+    max-width: var(--layout-max);
+    margin: auto;
+}

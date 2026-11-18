@@ -1,0 +1,16 @@
+:root {
+    /*colors*/
+    --color-accent:     #93827C;
+    --color-black:      #000501;
+    --color-white:      #FFFBFF;
+    --color-coffee:     #362419;
+    --color-secondary:  #F2D9C2;
+
+    --font-main: "Inter", system-ui, sans-serif;
+    --radius-accent: 10px;
+
+    --layout-max: 1440px;
+    --containter-max: 1080px;
+
+    --transition: transform 0.3s ease, visibility 0s;
+}
