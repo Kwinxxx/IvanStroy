@@ -75,7 +75,8 @@
         height: 90px;
     }
 
-    .text {
+    .text
+     > p {
         font-size: 12px !important;
     }
 }
