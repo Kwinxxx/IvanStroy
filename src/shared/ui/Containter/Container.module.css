@@ -1,4 +1,22 @@
-.containter {
-    max-width: var(--layout-max);
+.container {
+    max-width: var(--container-max);
     margin: auto;
+}
+
+@media (max-width: 1279px) {
+    .container {
+        max-width: var(--container-laptop);
+    }
+}
+
+@media (max-width: 1079px) {
+    .container {
+        max-width: var(--container-tablet);
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: var(--container-mobile);
+    }
 }

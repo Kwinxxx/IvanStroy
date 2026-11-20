@@ -1,0 +1,215 @@
+/*
+  Брейкпоинты (desktop-first, значения прописаны числами, переменные в @media не работают)
+  desktop  — базовые стили (от 1440px)
+  laptop   — max-width: 1279px   сжатие шапки, чтобы всё помещалось до 1080px
+  tablet   — max-width: 1079px   шапка уменьшается
+  mobile   — max-width: 767px    бургер-меню
+
+  Слои (z-index): оверлей 10 < панель 11 < бургер 12
+*/
+
+/* ========== DESKTOP ========== */
+
+.header {
+    max-width: var(--layout-max);
+    margin: 10px auto 0;
+    padding-inline: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.highLightText {
+    color: var(--color-accent) !important;
+    white-space: nowrap;
+}
+
+/* --- Логотип --- */
+.fullLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- Навигация --- */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > div {
+        white-space: nowrap;
+        padding: 5px 10px;
+        transition: var(--transition);
+    }
+
+    >div:hover {
+        color: var(--color-accent);
+    }
+}
+
+/* --- Телефон --- */
+.connectionWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* --- Мобильные элементы: на десктопе скрыты --- */
+.burgerMenu,
+.overlayBurger,
+.navMenuMobile {
+    display: none;
+}
+
+/* ========== LAPTOP ========== */
+
+@media (max-width: 1279px) {
+    .header h1 { font-size: 30px; }
+    .header h3 { font-size: 18px; }
+    .header h4 { font-size: 12px; }
+}
+
+/* ========== TABLET ========== */
+
+@media (max-width: 1079px) {
+    .header h1 { font-size: 24px; }
+    .header h3 { font-size: 12px; }
+    .header h4 { font-size: 10px; }
+
+    .nav > div {
+        font-size: 12px;
+    }
+
+    .headerImg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .headerImgLogo {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* ========== MOBILE ========== */
+
+@media (max-width: 767px) {
+    /* Прячем десктопное меню и телефон */
+    .nav,
+    .connectionWrapper {
+        display: none;
+    }
+
+
+    .headerImgLogo {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* --- Бургер --- */
+    .burgerMenu {
+        display: block;
+        position: relative;
+        z-index: 12;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .burgerMenu span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        border-radius: var(--radius-accent);
+        background-color: var(--color-accent);
+        transition: top 0.3s ease, bottom 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .burgerMenu span:nth-child(1) {
+        top: 0;
+    }
+
+    .burgerMenu span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .burgerMenu span:nth-child(3) {
+        bottom: 0;
+    }
+
+    /* Бургер → крестик */
+    .burgerMenu.open span:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    .burgerMenu.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burgerMenu.open span:nth-child(3) {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+    }
+
+    /* --- Оверлей --- */
+    .overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .overlay.open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* --- Выдвижная панель --- */
+    .navMenuMobile {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 11;
+        width: 70%;
+        height: 100vh;
+        padding: 90px 20px 20px;
+        background-color: var(--color-white);
+        overflow-y: auto;
+
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: var(--transition) linear 0.3s;
+    }
+
+    .navMenuMobile.open {
+        transform: translateX(0);
+        visibility: visible;
+        transition: var(--transition);
+    }
+
+    .navMobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        font-size: 18px;
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+
+}

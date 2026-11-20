@@ -1,11 +1,11 @@
-import styles from './Containter.module.css'
+import styles from './Container.module.css'
 
 const Container = (props) => {
     const {
         children
     } = props
     return (
-        <div className={styles.containter}>
+        <div className={styles.container}>
             {children}
         </div>
     )

@@ -8,9 +8,16 @@
 
     --font-main: "Inter", system-ui, sans-serif;
     --radius-accent: 10px;
+    --radius-50: 50px;
 
     --layout-max: 1440px;
-    --containter-max: 1080px;
 
-    --transition: transform 0.3s ease, visibility 0s;
+    --container-max: 1080px;
+    --container-laptop: 820px;
+    --container-tablet: 760px;
+    --container-mobile: 375px;
+
+    --transition: all 0.3s ease, visibility 0s;
+    --padding-10-20: 10px 20px;
+    --padding-5-10: 5px 10px;
 }
