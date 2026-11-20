@@ -7,13 +7,11 @@ import styles from './HomePage.module.css';
 import Hero from "../../../widgets/Hero";
 import Delivery from "../../../widgets/Delivery";
 import Certificates from "../../../widgets/Certificates";
+import Addresses from "../../../widgets/Adresses";
 
 
 
 const HomePage = () => {
-
-
-
     return (
         <>
         <Header />
@@ -21,6 +19,7 @@ const HomePage = () => {
             <Hero />
             <Delivery />
             <Certificates />
+            <Addresses />
         </Containter>
         </>
     )

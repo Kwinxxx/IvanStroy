@@ -1,0 +1,97 @@
+/* ========== DESKTOP (база) ========== */
+
+.addresses {
+    max-width: var(--content-max);
+    margin: 0 auto;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.name {
+    margin-bottom: 16px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.text + .text {
+    margin-top: 18px;
+}
+
+.label {
+    text-transform: uppercase;
+}
+
+.mapWrapper {
+    border-radius: var(--radius-accent);
+    overflow: hidden;
+}
+
+.map {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+/* ========== LAPTOP ========== */
+
+@media (max-width: 1279px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+}
+
+/* ========== TABLET ========== */
+
+@media (max-width: 1079px) {
+    .title {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .list {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .name {
+        font-size: 18px;
+    }
+
+    .text {
+        font-size: 12px;
+    }
+
+}
+
+/* ========== MOBILE ========== */
+
+@media (max-width: 767px) {
+    .list {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .map {
+        height: 260px;
+    }
+}
