@@ -84,6 +84,10 @@
 /* ========== MOBILE ========== */
 
 @media (max-width: 767px) {
+    .delivery {
+        margin-inline: 30px;
+    }
+
     .grid {
         grid-template-columns: 1fr;
     }
