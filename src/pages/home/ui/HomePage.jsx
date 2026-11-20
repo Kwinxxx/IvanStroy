@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import styles from './HomePage.module.css';
 import Hero from "../../../widgets/Hero";
 import Delivery from "../../../widgets/Delivery";
+import Certificates from "../../../widgets/Certificates";
 
 
 
@@ -19,6 +20,7 @@ const HomePage = () => {
         <Containter>
             <Hero />
             <Delivery />
+            <Certificates />
         </Containter>
         </>
     )
