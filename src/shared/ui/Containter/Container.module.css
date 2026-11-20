@@ -1,6 +1,9 @@
 .container {
     max-width: var(--container-max);
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 
 @media (max-width: 1279px) {
@@ -12,11 +15,13 @@
 @media (max-width: 1079px) {
     .container {
         max-width: var(--container-tablet);
+        gap: 80px;
     }
 }
 
 @media (max-width: 767px) {
     .container {
         max-width: var(--container-mobile);
+        gap: 60px;
     }
 }

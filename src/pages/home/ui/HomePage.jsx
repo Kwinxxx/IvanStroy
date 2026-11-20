@@ -5,6 +5,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import styles from './HomePage.module.css';
 import Hero from "../../../widgets/Hero";
+import Delivery from "../../../widgets/Delivery";
+
+
 
 const HomePage = () => {
 
@@ -15,6 +18,7 @@ const HomePage = () => {
         <Header />
         <Containter>
             <Hero />
+            <Delivery />
         </Containter>
         </>
     )

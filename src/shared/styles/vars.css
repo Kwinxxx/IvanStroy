@@ -9,7 +9,7 @@
     --font-main: "Inter", system-ui, sans-serif;
     --radius-accent: 10px;
     --radius-50: 50px;
-
+    --border-accent: 1px solid var(--color-accent);
     --layout-max: 1440px;
 
     --container-max: 1080px;
