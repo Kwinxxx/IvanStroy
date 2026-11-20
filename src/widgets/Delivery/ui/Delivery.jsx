@@ -68,7 +68,7 @@ const Delivery = () => {
     ]
 
     return (
-        <section className={styles.delivery}>
+        <section className={styles.delivery} id='delivery'>
                 <div className={styles.grid}>
                     { CARDS.map(({id, title, icon, text, wide}) => (
                         <article

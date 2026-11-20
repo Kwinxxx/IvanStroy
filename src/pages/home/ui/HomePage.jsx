@@ -8,6 +8,7 @@ import Hero from "../../../widgets/Hero";
 import Delivery from "../../../widgets/Delivery";
 import Certificates from "../../../widgets/Certificates";
 import Addresses from "../../../widgets/Adresses";
+import Footer from "../../../widgets/Footer";
 
 
 
@@ -21,6 +22,7 @@ const HomePage = () => {
             <Certificates />
             <Addresses />
         </Containter>
+        <Footer />
         </>
     )
 }

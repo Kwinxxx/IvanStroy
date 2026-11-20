@@ -19,7 +19,7 @@ const Certificates = () => {
 
 
     return (
-        <section className={styles.certificates}>
+        <section className={styles.certificates} id='certificates'>
             <h2 className={styles.title}>Сертификаты</h2>
 
             <div className={styles.grid}>

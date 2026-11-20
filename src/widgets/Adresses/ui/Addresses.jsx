@@ -22,7 +22,7 @@ const LOCATIONS = [
 
 const Addresses = () => {
     return (
-        <section className={styles.addresses}>
+        <section className={styles.addresses} id="addresses">
             <h1 className={styles.title}>Адреса торговых павильонов</h1>
 
             <div className={styles.list}>

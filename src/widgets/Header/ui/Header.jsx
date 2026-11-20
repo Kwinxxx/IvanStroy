@@ -25,13 +25,21 @@ const Header = () => {
                     <h4 className={styles.highLightText}>Магазин отделочных материалов</h4>
                 </div>
             </div>
-            <nav className={styles.nav}>
-                <div>Каталог</div>
-                <div>Оплата и доставка</div>
-                <div>Сертификаты</div>
-                <div>Адреса магазинов</div>
+            <ul className={styles.nav}>
+                <li className={styles.navItem}>
+                    <a href="#">Каталог</a>
+                </li>
+                <li className={styles.navItem}>
+                    <a href="#delivery">Оплата и доставка</a>
+                </li>
+                <li className={styles.navItem}>
+                    <a href="#certificates">Сертификаты</a>
+                </li>
+                <li className={styles.navItem}>
+                    <a href="#addresses">Адреса магазинов</a>
+                </li>
                 <img src={cartImg} alt="cart" className={styles.headerImg}/>
-            </nav>
+            </ul>
             <div className={styles.connectionWrapper}>
                 <img src={callImg} alt="call" className={styles.headerImg}/>
                 <h3 className={styles.highLightText}>+7-905-011-8279</h3>
@@ -46,10 +54,10 @@ const Header = () => {
                 id="mobile-menu"
                 >
                 <nav className={styles.navMobile} onClick={closeMenu}>
-                    <div>Каталог</div>
-                    <div>Оплата и доставка</div>
-                    <div>Сертификаты</div>
-                    <div>Адреса магазинов</div>
+                    <a href="#">Каталог</a>
+                    <a href="#delivery">Оплата и доставка</a>
+                    <a href="#certificates">Сертификаты</a>
+                    <a href="#addresses">Адреса магазинов</a>
                     <h3 className={styles.highLightText}>+7-905-011-8279</h3>
                 </nav>
             </div>

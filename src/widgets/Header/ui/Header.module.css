@@ -36,15 +36,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
 
-    > div {
-        white-space: nowrap;
-        padding: 5px 10px;
-        transition: var(--transition);
-    }
+.navItem {
+    white-space: nowrap;
+    padding: 5px 10px;
+    transition: var(--transition);
+}
 
-    >div:hover {
+.navItem:hover {
+    > a {
         color: var(--color-accent);
+        cursor: pointer;
     }
 }
 

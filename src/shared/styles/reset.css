@@ -7,6 +7,11 @@
     color: var(--color-black);
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: var(--font-main);
@@ -57,3 +62,13 @@ img {
 p {
     font-size: 18px;
 }
+
+ul {
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+

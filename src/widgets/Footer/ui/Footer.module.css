@@ -1,0 +1,86 @@
+/* ========== DESKTOP ========== */
+
+.footer {
+    max-width: var(--layout-max);
+    margin: 40px auto 0;
+    padding: 30px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--color-secondary);
+    border-top-left-radius: var(--radius-accent);
+    border-top-right-radius: var(--radius-accent);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.copyright,
+.description {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--color-accent);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* ========== LAPTOP ========== */
+
+@media (max-width: 1279px) {
+    .footer {
+        padding-inline: 50px;
+    }
+}
+
+/* ========== TABLET ========== */
+
+@media (max-width: 1079px) {
+    .footer {
+        padding: 24px 30px;
+    }
+
+    .link {
+        font-size: 12px;
+    }
+}
+
+/* ========== MOBILE ========== */
+
+@media (max-width: 767px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 24px;
+    }
+
+    .info {
+        gap: 16px;
+    }
+
+    .list {
+        gap: 12px;
+    }
+}

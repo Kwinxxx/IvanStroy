@@ -17,6 +17,12 @@
     margin-bottom: 40px;
 }
 
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .name {
     margin-bottom: 16px;
     font-size: 30px;
